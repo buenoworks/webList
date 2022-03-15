@@ -1,0 +1,42 @@
+<mat-tab-group  mat-align-tabs="center" (selectedTabChange)="tab($event)">
+  <mat-tab label="Postagens">
+    <div class="content">
+      <div class="grid-post">
+        <div *ngFor="let list of postList">
+          <mat-card class="card-post">
+            <mat-card-title>{{list?.title}}</mat-card-title>
+            <mat-card-content>
+              <p>{{list?.body}}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Albuns">
+    <div class="content">
+      <div class="grid-album">
+        <div *ngFor="let list of albumList">
+          <mat-card class="card-album">
+            <mat-card-title>{{list?.title}}</mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="To-do">
+    <div class="content">
+      <div class="grid-todo">
+        <div *ngFor="let list of todoList">
+          <mat-card class="card-todo">
+            <mat-card-subtitle class="status" [ngClass]="list.completed == true ? 'true' : 'false'">
+              <div *ngIf="list.completed == true">Completo</div>
+              <div *ngIf="list.completed == false">Incompleto</div>
+            </mat-card-subtitle>
+            <mat-card-title>{{list?.title}}</mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+   </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: initial;
+  width: 100%;
+  padding: 50px 6%;
+  background-color: #f1f1f1;
+}
+
+
+@media screen and (min-width: 769px) {
+
+}
+
+@media screen and (min-width: 1366px) {
+  .content {
+    max-width: 1360px;
+    margin: 0 auto;
+    width: auto;
+  }
+}

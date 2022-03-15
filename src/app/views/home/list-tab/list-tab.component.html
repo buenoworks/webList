@@ -16,10 +16,8 @@
   <mat-tab label="Albuns">
     <div class="content">
       <div class="grid-album">
-        <div *ngFor="let list of albumList">
-          <mat-card class="card-album">
-            <mat-card-title>{{list?.title}}</mat-card-title>
-          </mat-card>
+        <div *ngFor="let album of albumList">
+          <a class="card-album" routerLink="photos/{{album.id}}">{{album?.title}}</a>
         </div>
       </div>
     </div>
@@ -38,5 +36,5 @@
         </div>
       </div>
     </div>
-   </mat-tab>
+  </mat-tab>
 </mat-tab-group>

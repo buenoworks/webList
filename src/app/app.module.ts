@@ -12,12 +12,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatBadgeModule } from '@angular/material/badge';
+import { PhotosComponent } from './views/home/list-tab/photos/photos.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ListTabComponent
+    ListTabComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,

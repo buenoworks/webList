@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="content">
+  <button routerLink="/">Voltar</button>
+  <h3>Album {{albumId}}</h3>
+  <!-- <div *ngFor="let photo of photoList">
+    <img src="{{photo.url}}" alt="">
+  </div> -->
+
+
+  <div class="grid-photos">
+    <mat-card *ngFor="let photo of photoList">
+      <mat-card-header>
+        <mat-card-title>{{photo.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{photo.url}}" alt="Photo of a Shiba Inu">
+    </mat-card>
+  </div>
+
+</div>
